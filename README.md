@@ -27,10 +27,8 @@ Includes:
 
 ### Displayed data
 Includes:
-- **year_plotline**: Each of the plotlines in the outer radar representing data-values per dow per month, therefore a year
-_plotline has `84=12*7` data-values.
-- **tod_plotline**: Each of the plotlines in the inner radar representing data-values per hour of the day, therefore a tod
-_plotline has `24` data-values.
+- **year_plotline**: Each of the plotlines in the outer radar representing data-values per dow per month, therefore a *year_plotline* has `84=12*7` data-values.
+- **tod_plotline**: Each of the plotlines in the inner radar representing data-values per hour of the day, therefore a *tod_plotline* has `24` data-values.
 
 
 ## Example of Use
