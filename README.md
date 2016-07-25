@@ -59,9 +59,9 @@ _range to the corresponding year.
 - **getTodRange()/setTodRange(new_tod_range)**: gets or sets the selected range of hours of the day. Graphically corresponds to the inner (day) brush.
 
 ### Subscribing to changes
-- **onChange(delegate_function)**: The delegate function is called on any change of the filters after calling the subscribed function for the specific filter as follows:
--- *onYearChange(delegate_function)*
--- *onDatesChange(delegate_function)* 
--- *onDowsChange(delegate_function)*
--- *onTodChange(delegate_function)* 
+* **onChange(delegate_function)**: The delegate function is called on any change of the filters after calling the subscribed function for the specific filter as follows:
+** *onYearChange(delegate_function)*
+** *onDatesChange(delegate_function)* 
+** *onDowsChange(delegate_function)*
+** *onTodChange(delegate_function)* 
 
