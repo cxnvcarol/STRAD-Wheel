@@ -1,5 +1,5 @@
 # STRAD-TimeRadar
-Web-based library for the visualization of temporal data.
+Web-based library for the visualization of temporal data
 
 This is a practical web library to query and visualize temporal data in different granularity levels: year, month, day of the week, time of the day.
 It is based and depends on [D3.js] (https://d3js.org/), [jquery] (https://jquery.com/), and the following open source resources:
