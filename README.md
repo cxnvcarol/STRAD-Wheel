@@ -60,8 +60,8 @@ _range to the corresponding year.
 
 ### Subscribing to changes
 * **onChange(delegate_function)**: The delegate function is called on any change of the filters after calling the subscribed function for the specific filter as follows:
-** *onYearChange(delegate_function)*
-** *onDatesChange(delegate_function)* 
-** *onDowsChange(delegate_function)*
-** *onTodChange(delegate_function)* 
+  * *onYearChange(delegate_function)*
+  * *onDatesChange(delegate_function)* 
+  * *onDowsChange(delegate_function)*
+  * *onTodChange(delegate_function)* 
 
