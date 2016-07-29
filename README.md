@@ -4,7 +4,7 @@ Web-based library for the visualization of temporal data
 This is a practical web library to query and visualize temporal data in different granularity levels: year, month, day of the week, time of the day.
 It is based and depends on [D3.js] (https://d3js.org/), [jquery] (https://jquery.com/), and the following open source resources:
 - **D3.circularbrush.js**: Used [circular brush] (https://github.com/emeeks/d3.svg.circularbrush) to set the filters of range.
-- **radar.js**: Modified [radar-chart] (https://gist.github.com/nbremer/6506614), based in turn on this [radar-chart-d3] (https://github.com/alangrafu/radar-chart-d3) library
+- **radar.js**: Modified [radar-chart] (https://gist.github.com/chrisrzhou/2421ac6541b68c1680f8), based in turn on this [radar-chart-d3] (https://github.com/alangrafu/radar-chart-d3) library
 
 // include image to show graphical elements
 
