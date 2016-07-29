@@ -34,7 +34,7 @@ Includes:
 //complete with demo doc.
 ## API
 ### Initializing
-- **TimeRadar(selector)**: Constructor receiving a String corresponding to the CSS3 selector of the element to populate with the STRAD Radar.
+- **TimeRadar(selector)**: Constructor receiving a String corresponding to the CSS3 selector of the element to populate with the STRAD Wheel.
 - **setSelectableYears(years_array)**: Receives an array of integer with the selectable years (corresponding to the select element in the view). The selected year is used to match the dates
 _range to the corresponding year.
 
