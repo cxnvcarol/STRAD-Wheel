@@ -1,4 +1,4 @@
-# STRAD-TimeRadar
+# STRAD-Wheel
 Web-based library for the visualization of temporal data
 
 This is a practical web library to query and visualize temporal data in different granularity levels: year, month, day of the week, time of the day.
@@ -12,15 +12,14 @@ It is based and depends on [D3.js] (https://d3js.org/), [jquery] (https://jquery
 //gist page here
 
 ## Definitions
-### Represented time levels
+### Used time granularities
 - **year**: Selected year. Of type integer.
 - **month**: Month of the year. Represented as an integer from 0 to 11 respectively from January to December.
 - **dow**: Day of the Week. Integer in the set *`[0,1,2,3,4,5,6]`* corresponding to the days from Sunday(0) to Saturday(6)
 - **tod**: Time of the day. Represented as an integer for each hour from `0` to `23`.
 
 ### Filters
-Includes:
-- **selected_year**: integer with the year corresponding to the displayed data in both, inner(day) and outer(year) radar.
+- **selected_year**: integer with the selected year in the `<select>` html tag.
 - **dates_range**: array of size 2 with the initial and final Date selected in the brush for the outer radar.
 - **dows**: array of size of minimum 0 and maximum 7 with the selected days of the week.
 - **tod_range**: array of size 2 with the initial and final hour of the day selected in the brush for the inner radar.
@@ -57,9 +56,8 @@ _range to the corresponding year.
 - **getTodRange()/setTodRange(new_tod_range)**: gets or sets the selected range of hours of the day. Graphically corresponds to the inner (day) brush.
 
 ### Subscribing to changes
-* **onChange(delegate_function)**: The delegate function is called on any change of the filters after calling the subscribed function for the specific filter as follows:
-  * **onYearChange(delegate_function)**
-  * **onDatesChange(delegate_function)**
-  * **onDowsChange(delegate_function)**
-  * **onTodChange(delegate_function)**
-
+* **onYearChange(delegate_function)**: The parameter function is called after the year selection changes.
+* **onDatesChange(delegate_function)**: The parameter function is called after any change in the dates_range
+* **onDowsChange(delegate_function)**: The parameter function is called on any change of the dows array.
+* **onTodChange(delegate_function)**: The parameter function is called on any change of the tod_range.
+* **onChange(delegate_function)**: The delegate function is called on any change of the filters after calling the subscribed function for the corresponding filter.
