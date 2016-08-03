@@ -7,7 +7,7 @@ It is based and depends on [D3.js] (https://d3js.org/), [jquery] (https://jquery
 - **radar.js**: Modified [radar-chart] (https://gist.github.com/chrisrzhou/2421ac6541b68c1680f8), based in turn on this [radar-chart-d3] (https://github.com/alangrafu/radar-chart-d3) library
 
 
-![Image of Stradwheel](https://cxnvcarol.github.io/STRAD-Wheel/static/images/stradwheel.png)
+![Image of Stradwheel](https://cxnvcarol.github.io/STRAD-Wheel/static/images/stradwheel.png =400)
 
 ## Demo
 [Visit here](https://cxnvcarol.github.io/STRAD-Wheel/)
