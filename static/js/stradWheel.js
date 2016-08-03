@@ -3,15 +3,41 @@
  */
 //Here are the exposed services of our library.
 
-var TimeviewTool=function(parent_selector){
+var StradWheel=function(parent_selector){
 
     //empty dayradar
-    var empty_dayradar=[{"group":"Total per hour","axes":[{"axis":"12m","value":0},{"axis":"11am","value":0},{"axis":"10am","value":0},{"axis":"9am","value":0},{"axis":"8am","value":0},{"axis":"7am","value":0},{"axis":"6am","value":0},{"axis":"5am","value":0},{"axis":"4am","value":0},{"axis":"3am","value":0},{"axis":"2am","value":0},{"axis":"1am","value":0},{"axis":"12am","value":0},{"axis":"11pm","value":0},{"axis":"10pm","value":0},{"axis":"9pm","value":0},{"axis":"8pm","value":0},{"axis":"7pm","value":0},{"axis":"6pm","value":0},{"axis":"5pm","value":0},{"axis":"4pm","value":0},{"axis":"3pm","value":0},{"axis":"2pm","value":0},{"axis":"1pm","value":0}]}];
-    var empty_yearradar=[[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}]];
+    var empty_dayradar=[{"group":"","axes":[{"axis":"12m","value":0},{"axis":"11am","value":0},{"axis":"10am","value":0},{"axis":"9am","value":0},{"axis":"8am","value":0},{"axis":"7am","value":0},{"axis":"6am","value":0},{"axis":"5am","value":0},{"axis":"4am","value":0},{"axis":"3am","value":0},{"axis":"2am","value":0},{"axis":"1am","value":0},{"axis":"12am","value":0},{"axis":"11pm","value":0},{"axis":"10pm","value":0},{"axis":"9pm","value":0},{"axis":"8pm","value":0},{"axis":"7pm","value":0},{"axis":"6pm","value":0},{"axis":"5pm","value":0},{"axis":"4pm","value":0},{"axis":"3pm","value":0},{"axis":"2pm","value":0},{"axis":"1pm","value":0}]}];
+    var empty_yearradar=[[{"group":"","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}]];
 
+    var emptyTweetsRadarHourly=JSON.stringify([
+        {h:"12am",c:0},
+        {h:"1am",c:0},
+        {h:"2am",c:0},
+        {h:"3am",c:0},
+        {h:"4am",c:0},
+        {h:"5am",c:0},
+        {h:"6am",c:0},
+        {h:"7am",c:0},
+        {h:"8am",c:0},
+        {h:"9am",c:0},
+        {h:"10am",c:0},
+        {h:"11am",c:0},
+        {h:"12m",c:0},
+        {h:"1pm",c:0},
+        {h:"2pm",c:0},
+        {h:"3pm",c:0},
+        {h:"4pm",c:0},
+        {h:"5pm",c:0},
+        {h:"6pm",c:0},
+        {h:"7pm",c:0},
+        {h:"8pm",c:0},
+        {h:"9pm",c:0},
+        {h:"10pm",c:0},
+        {h:"11pm",c:0}
+    ]);
 
-    //TODO remove from production
-    this.example_yearparam=[{"m":0,"d":0,"v":25},{"m":0,"d":1,"v":10},{"m":0,"d":2,"v":10},{"m":0,"d":3,"v":15},{"m":0,"d":4,"v":10},{"m":0,"d":5,"v":10},{"m":0,"d":6,"v":10},{"m":1,"d":0,"v":10},{"m":1,"d":1,"v":10},{"m":1,"d":2,"v":10},{"m":1,"d":3,"v":15},{"m":1,"d":4,"v":10},{"m":1,"d":5,"v":10},{"m":1,"d":6,"v":10},{"m":2,"d":0,"v":10},{"m":2,"d":1,"v":10},{"m":2,"d":2,"v":10},{"m":2,"d":3,"v":15},{"m":2,"d":4,"v":10},{"m":2,"d":5,"v":10},{"m":2,"d":6,"v":10},{"m":3,"d":0,"v":10},{"m":3,"d":1,"v":10},{"m":3,"d":2,"v":10},{"m":3,"d":3,"v":15},{"m":3,"d":4,"v":10},{"m":3,"d":5,"v":10},{"m":3,"d":6,"v":10},{"m":4,"d":0,"v":10},{"m":4,"d":1,"v":10},{"m":4,"d":2,"v":10},{"m":4,"d":3,"v":15},{"m":4,"d":4,"v":10},{"m":4,"d":5,"v":10},{"m":4,"d":6,"v":10},{"m":5,"d":0,"v":10},{"m":5,"d":1,"v":10},{"m":5,"d":2,"v":10},{"m":5,"d":3,"v":15},{"m":5,"d":4,"v":10},{"m":5,"d":5,"v":10},{"m":5,"d":6,"v":10},{"m":6,"d":0,"v":10},{"m":6,"d":1,"v":10},{"m":6,"d":2,"v":10},{"m":6,"d":3,"v":15},{"m":6,"d":4,"v":10},{"m":6,"d":5,"v":10},{"m":6,"d":6,"v":10},{"m":7,"d":0,"v":10},{"m":7,"d":1,"v":10},{"m":7,"d":2,"v":10},{"m":7,"d":3,"v":15},{"m":7,"d":4,"v":10},{"m":7,"d":5,"v":10},{"m":7,"d":6,"v":10},{"m":8,"d":0,"v":10},{"m":8,"d":1,"v":10},{"m":8,"d":2,"v":10},{"m":8,"d":3,"v":15},{"m":8,"d":4,"v":10},{"m":8,"d":5,"v":10},{"m":8,"d":6,"v":10},{"m":9,"d":0,"v":10},{"m":9,"d":1,"v":10},{"m":9,"d":2,"v":10},{"m":9,"d":3,"v":15},{"m":9,"d":4,"v":10},{"m":9,"d":5,"v":10},{"m":9,"d":6,"v":10},{"m":10,"d":0,"v":10},{"m":10,"d":1,"v":10},{"m":10,"d":2,"v":10},{"m":10,"d":3,"v":15},{"m":10,"d":4,"v":10},{"m":10,"d":5,"v":10},{"m":10,"d":6,"v":10},{"m":11,"d":0,"v":10},{"m":11,"d":1,"v":10},{"m":11,"d":2,"v":10},{"m":11,"d":3,"v":15},{"m":11,"d":4,"v":10},{"m":11,"d":5,"v":10},{"m":11,"d":6,"v":10}];
+    this.example_yearparam=[{"m":0,"d":0,"v":2.5},{"m":0,"d":1,"v":1.2},{"m":0,"d":2,"v":10},{"m":0,"d":3,"v":7.4},{"m":0,"d":4,"v":10},{"m":0,"d":5,"v":10},{"m":0,"d":6,"v":10},{"m":1,"d":0,"v":10},{"m":1,"d":1,"v":10},{"m":1,"d":2,"v":10},{"m":1,"d":3,"v":15},{"m":1,"d":4,"v":10},{"m":1,"d":5,"v":10},{"m":1,"d":6,"v":10},{"m":2,"d":0,"v":10},{"m":2,"d":1,"v":10},{"m":2,"d":2,"v":10},{"m":2,"d":3,"v":15},{"m":2,"d":4,"v":10},{"m":2,"d":5,"v":10},{"m":2,"d":6,"v":10},{"m":3,"d":0,"v":10},{"m":3,"d":1,"v":10},{"m":3,"d":2,"v":10},{"m":3,"d":3,"v":15},{"m":3,"d":4,"v":10},{"m":3,"d":5,"v":10},{"m":3,"d":6,"v":10},{"m":4,"d":0,"v":10},{"m":4,"d":1,"v":10},{"m":4,"d":2,"v":10},{"m":4,"d":3,"v":15},{"m":4,"d":4,"v":10},{"m":4,"d":5,"v":10},{"m":4,"d":6,"v":10},{"m":5,"d":0,"v":10},{"m":5,"d":1,"v":10},{"m":5,"d":2,"v":10},{"m":5,"d":3,"v":15},{"m":5,"d":4,"v":10},{"m":5,"d":5,"v":10},{"m":5,"d":6,"v":10},{"m":6,"d":0,"v":10},{"m":6,"d":1,"v":10},{"m":6,"d":2,"v":10},{"m":6,"d":3,"v":15},{"m":6,"d":4,"v":10},{"m":6,"d":5,"v":10},{"m":6,"d":6,"v":10},{"m":7,"d":0,"v":10},{"m":7,"d":1,"v":10},{"m":7,"d":2,"v":10},{"m":7,"d":3,"v":15},{"m":7,"d":4,"v":10},{"m":7,"d":5,"v":10},{"m":7,"d":6,"v":10},{"m":8,"d":0,"v":10},{"m":8,"d":1,"v":10},{"m":8,"d":2,"v":10},{"m":8,"d":3,"v":15},{"m":8,"d":4,"v":10},{"m":8,"d":5,"v":10},{"m":8,"d":6,"v":10},{"m":9,"d":0,"v":10},{"m":9,"d":1,"v":10},{"m":9,"d":2,"v":10},{"m":9,"d":3,"v":15},{"m":9,"d":4,"v":10},{"m":9,"d":5,"v":10},{"m":9,"d":6,"v":10},{"m":10,"d":0,"v":10},{"m":10,"d":1,"v":10},{"m":10,"d":2,"v":10},{"m":10,"d":3,"v":15},{"m":10,"d":4,"v":10},{"m":10,"d":5,"v":10},{"m":10,"d":6,"v":10},{"m":11,"d":0,"v":10},{"m":11,"d":1,"v":10},{"m":11,"d":2,"v":10},{"m":11,"d":3,"v":15},{"m":11,"d":4,"v":10},{"m":11,"d":5,"v":10},{"m":11,"d":6,"v":10}];
+    this.example_dayparam=[{"h":0,"v":1.5},{"h":1,"v":1},{"h":2,"v":1.2},{"h":3,"v":2.7},{"h":4,"v":2.5},{"h":5,"v":2.5},{"h":6,"v":2.5},{"h":7,"v":2.5},{"h":8,"v":2.5},{"h":9,"v":2.5},{"h":10,"v":2.5},{"h":11,"v":2.5},{"h":12,"v":2.5},{"h":13,"v":2.5},{"h":14,"v":2.5},{"h":15,"v":2.5},{"h":16,"v":2.5},{"h":17,"v":2.5},{"h":18,"v":2.5},{"h":19,"v":2.5},{"h":20,"v":2.5},{"h":21,"v":2.5},{"h":22,"v":2.5},{"h":23,"v":2.5}];
     //private varables
     var parent_div=$(parent_selector);
     parent_div.addClass("timeview");
@@ -28,194 +54,18 @@ var TimeviewTool=function(parent_selector){
     };
 
 
+    var yearRadarPlotted=empty_yearradar;
+    var yearRadarData=[];
+    var dayRadarData=[];
+    var plottedHours=empty_dayradar;
 
-
-    var onChangeFn=function(){};
-    var onYearChangeFn=function(){};
-    var onDatesChangeFn=function(){};
-    var onDowsChangeFn=function(){};
-    var onHoursChangeFn=function(){};
-
-
-    /**
-     *
-     * @param name label x legend
-     * @param data=[{month:,dow:,value}]
-     */
-    this.addYearPlotline=function(name,dataP){
-
-        //for each month, if lenght!=7 it autocompletes (with 0 for now) fix radar.js to accept undefined
-        //if name already exists I should replace: assign in the same index.
-
-        if(yearRadarData.length==0)
-        {
-            yearRadarPlotted=[[],[],[],[],[],[],[],[],[],[],[],[]];
-        }
-        var iexists=-1;
-        var f=yearRadarData.filter(function(o){return o.legend==name;});
-        if(f.length>0)
-        {
-            iexists=yearRadarData.indexOf(f[0]);
-        }
-        if(iexists>-1)
-        {
-            yearRadarData[iexists]={legend:name,data:dataP};
-
-        }
-        else yearRadarData.push({legend:name,data:dataP});
-
-        //then, map dataP into real radar format
-
-        var month=0;
-        for(month=0;month<12;month++)
-        {
-            var md=dataP.filter(function(o){return o.m==month;});
-            var axesm=[];
-            for(var d=0;d<7;d++)
-            {
-                var thisday=md.filter(function(o){return o.d==d});//if there is more than one value it's ignored.
-                if(thisday.length>0)
-                {
-                    axesm.push({axis:weekdays[d],value:thisday[0].v});
-                }
-                else axesm.push({axis:weekdays[d],value:0});//autocomplete (with 0 for now) fixme in radar.js to accept undefined values
-
-            }
-            axesm=axesm.reverse();
-            var poped=axesm.pop();
-            axesm.unshift(poped);//it sets the right order!
-
-
-            //then, push to yearRadarPlotted
-            if(iexists>-1){
-                yearRadarPlotted[month][iexists]({group:name,axes:axesm});
-            }
-            else yearRadarPlotted[month].push({group:name,axes:axesm});
-        }
-
-        //then plot
-        updateDynamicZoom(timeFilters.dates_range);
-
-        return yearRadarPlotted;
-    };
-    /**
-     *
-     * @param name legend
-     * @param data=[{hour:,value:}]
-     */
-    this.addDayPlotline=function(name,data){
-        //TODO the parameter should be easier than this... something like [int]x24 (3)
-        //also use the name instead of embedding it in the data parameter
-        plottedHours.push(data);
-        RadarChart.draw(parent_selector+" .radar_hours", plottedHours, radarConfigHours);
-
-    };
-    this.removeYearPlotline=function(name){
-        var f=yearRadarData.filter(function(o){return o.legend==name;});
-        if(f.length>0)
-        {
-            var theid=yearRadarData.indexOf(f[0]);
-            yearRadarData.splice(theid,1);
-            yearRadarPlotted.splice(theid,1);
-
-            //if the new size is 0 fill yearRadarPlotted with the dummy.
-            yearRadarData=empty_yearradar;
-            updateDynamicZoom(timeFilters.dates_range);
-            return true;
-        }
-        return false;
-    };
-    this.removeDayPlotline=function(name){
-        plottedHours=plottedHours.filter(function(ph){ph.group!=name});
-        if(plottedHours.length>0)
-        {
-            RadarChart.draw(parent_selector+" .radar_hours", plottedHours, radarConfigHours);
-        }
-        else
-        {
-            RadarChart.draw(parent_selector+" .radar_hours", empty_dayradar, radarConfigHours);
-        }
-    };
-
-    this.removeAllDayPlotlines=function(){
-        plottedHours =[];
-        RadarChart.draw(parent_selector+" .radar_hours", empty_dayradar, radarConfigHours);
-    };
-    this.removeAllYearPlotlines=function(){
-        yearRadarPlotted=[];
-        repaintDatesRadar();
-    };
-    this.onChange=function(delegate_function){
-        onChangeFn=delegate_function;
-
-    };
-    this.onHoursChange=function(delegate_function){
-        onHoursChangeFn=delegate_function;
-
-    };
-    this.onDowsChange=function(delegate_function){
-        onDowsChangeFn=delegate_function;
-
-    };
-    this.onDatesChange=function(delegate_function){
-        onDatesChangeFn=delegate_function;
-
-    };
-    this.onYearChange=function(delegate_function){
-        onYearChangeFn=delegate_function;
-    };
-
-    this.setSelectableYears=function(int_array)
-    {
-        //TODO Set select list x selected year (4)
-    }
-
-
-    this.setDows=function (new_dows)
-    {
-        timeFilters.dows=clone(new_dows);
-        onDowsChangeFn();
-        somethingChanged();
-    };
-    this.setDatesRange=function (new_dates)
-    {
-        if(!arraysEqual(timeFilters.dates_range,new_dates))
-        {
-            datesBrush.extent(reverse_dates_range(new_dates));
-        }
-        onDatesChangeFn();
-        somethingChanged();
-    };
-    this.setTodRange=function (new_hours)
-    {
-        if(!arraysEqual(timeFilters.hours_range,new_hours)) {
-            hoursBrush.extent(reverse_hours_range(new_hours));
-        }
-        onHoursChangeFn();
-        somethingChanged();
-    };
-    this.setSelectedYear=function(new_year){
-        $(parent_selector+" .year_selected").val(new_year);
-        yearSelectedChange();
+    var timeFiltersTemporal={ //used to update the text of selection, not the showed data
+        hours_range:[0,23],
+        dates_range:[new Date(selected_year,0,1),new Date(selected_year,11,31,23,59)],//include leap-year (365 days)
+        dows:[0,1,2,3,4,5,6]
     };
 
 
-    this.getTodRange=function(){
-        return clone(timeFilters.hours_range);
-
-    };
-    this.getDatesRange=function(){
-        return clone(timeFilters.dates_range);
-
-    };
-    this.getDows=function(){
-        return timeFilters.dows;
-    };
-    this.getYear=function(){
-        return selected_year;
-    };
-
-    //Bad paste from yearview.js
 
     /**
      * Created by CarolXimena on 01/10/2015.
@@ -256,7 +106,7 @@ var TimeviewTool=function(parent_selector){
         clickableAxes: true,
         rotateLabels:true,
         marginLegend:{x:-70,y:20},
-        colors: d3.scale.category20(),
+        colors: d3.scale.category20()
     };
     var radarConfigHours = {
         w: 240,
@@ -279,7 +129,7 @@ var TimeviewTool=function(parent_selector){
         innerRadius: 0.2, //percentage
         maxValue: 1,//minimum maximum-value showed
         marginLegend:{x:50,y:270},
-        colors: d3.scale.category20(),
+        colors: d3.scale.category20()
     };
 
 //config for dummies radars for styling
@@ -341,21 +191,272 @@ var TimeviewTool=function(parent_selector){
     var datesBrush,hoursBrush;
     var month = ["January","February","March","April", "May","June","July", "August","September","October","November","December"];
 
-    var yearRadarPlotted=[];
-    var yearRadarData=[];
-    var plottedHours=[];
 
-    var timeFiltersTemporal={ //used to update the text of selection, not the showed data
-        hours_range:[0,23],
-        dates_range:[new Date(),new Date()]//include leap-year (366 days)
+    var onChangeFn=function(){};
+    var onYearChangeFn=function(){};
+    var onDatesChangeFn=function(){};
+    var onDowsChangeFn=function(){};
+    var onHoursChangeFn=function(){};
+
+
+    /**
+     *
+     * @param name label x legend
+     * @param data=[{month:,dow:,value}]
+     */
+    this.addYearPlotline=function(name,dataP){
+
+        //for each month, if lenght!=7 it autocompletes (with 0 for now) fix radar.js to accept undefined
+        //if name already exists I should replace: assign in the same index.
+
+        if(yearRadarData.length==0)
+        {
+            yearRadarPlotted=[[],[],[],[],[],[],[],[],[],[],[],[]];
+        }
+        var iexists=-1;
+        var f=yearRadarData.filter(function(o){return o.legend==name;});
+        if(f.length>0)
+        {
+            iexists=yearRadarData.indexOf(f[0]);
+        }
+        if(iexists>-1)
+        {
+            yearRadarData[iexists]={legend:name,data:dataP};
+
+        }
+        else yearRadarData.push({legend:name,data:dataP});
+
+        //then, map dataP into real radar format
+
+        var month=0;
+        for(month=0;month<12;month++)
+        {
+            var md=dataP.filter(function(o){return o.m==month;});
+            var axesm=[];
+            for(var d=0;d<7;d++)
+            {
+                var thisday=md.filter(function(o){return o.d==d});//if there is more than one value it's ignored.
+                if(thisday.length>0)
+                {
+                    axesm.push({axis:weekdays[d],value:thisday[0].v});
+                }
+                else axesm.push({axis:weekdays[d],value:0});//autocomplete (with 0 for now) fixme in radar.js to accept undefined values
+
+            }
+            axesm=axesm.reverse();
+            var poped=axesm.pop();
+            axesm.unshift(poped);//it sets the right order!
+
+
+            //then, push to yearRadarPlotted
+            if(iexists>-1){
+                yearRadarPlotted[month][iexists]={group:name,axes:axesm};
+            }
+            else yearRadarPlotted[month].push({group:name,axes:axesm});
+        }
+
+        //then plot
+        updateDynamicZoom(timeFilters.dates_range);
+
+        return yearRadarPlotted;
     };
+    /**
+     *
+     * @param legend string
+     * @param data=[{h:,v:}]
+     */
+    this.addDayPlotline=function(name,dataP){
+        var f=dayRadarData.filter(function(o){return o.legend==name;});
+        var iexists=-1;
+        if(f.length>0)
+        {
+            iexists=dayRadarData.indexOf(f[0]);
+        }
+        if(iexists>-1)
+        {
+            dayRadarData[iexists]={legend:name,data:dataP};
+            plottedHours[iexists]=hoursJson(dataP,name);
+        }
+        else
+        {
+            dayRadarData.push({legend:name,data:dataP});
+            if(dayRadarData.length==1)
+            {
+                plottedHours=[];
+            }
+            plottedHours.push(hoursJson(dataP,name));
+        }
+
+        RadarChart.draw(parent_selector+" .radar_hours", plottedHours, radarConfigHours);
+
+    }
+    var addDayPlotline2=function(name,data){
+        //also use the name instead of embedding it in the data parameter
+
+        plottedHours.push(data);
+        RadarChart.draw(parent_selector+" .radar_hours", plottedHours, radarConfigHours);
+
+    };
+    this.removeYearPlotline=function(name){
+        var f=yearRadarData.filter(function(o){return o.legend==name;});
+        if(f.length>0)
+        {
+            var theid=yearRadarData.indexOf(f[0]);
+            yearRadarData.splice(theid,1);
+            yearRadarPlotted.forEach(function(month){
+                month.splice(theid,1);
+            })
+
+
+            //if the new size is 0 fill yearRadarPlotted with the dummy.
+            if(yearRadarData.length==0)
+            {
+                yearRadarPlotted=empty_yearradar;
+            }
+            updateDynamicZoom(timeFilters.dates_range);
+            return true;
+        }
+        return false;
+    };
+    this.removeDayPlotline=function(name){
+        var f=dayRadarData.filter(function(o){return o.legend==name;});
+        if(f.length>0)
+        {
+            var theid=dayRadarData.indexOf(f[0]);
+            dayRadarData.splice(theid,1);
+            plottedHours.splice(theid,1);
+
+            //if the new size is 0 fill yearRadarPlotted with the dummy.
+            if(dayRadarData.length==0)
+            {
+                plottedHours=empty_dayradar;
+            }
+            RadarChart.draw(parent_selector+" .radar_hours", plottedHours, radarConfigHours);
+
+            return true;
+        }
+        return false;
+    };
+
+    this.removeAllDayPlotlines=function(){
+        dayRadarData=[];
+        plottedHours =empty_dayradar;
+        RadarChart.draw(parent_selector+" .radar_hours", plottedHours, radarConfigHours);
+    };
+    this.removeAllYearPlotlines=function(){
+        yearRadarData=[];
+        yearRadarPlotted=empty_yearradar;
+        repaintDatesRadar();
+    };
+    this.onChange=function(delegate_function){
+        onChangeFn=delegate_function;
+
+    };
+    this.onHoursChange=function(delegate_function){
+        onHoursChangeFn=delegate_function;
+
+    };
+    this.onDowsChange=function(delegate_function){
+        onDowsChangeFn=delegate_function;
+
+    };
+    this.onDatesChange=function(delegate_function){
+        onDatesChangeFn=delegate_function;
+
+    };
+    this.onYearChange=function(delegate_function){
+        onYearChangeFn=delegate_function;
+    };
+
+    this.setSelectableYears=function(int_array)
+    {
+        var stag=$(parent_selector+" select#selected_year");
+        stag.html();
+        var options="";
+        for(var i in int_array)
+        {
+            options+="<option>"+i+"</option>";
+        }
+        stag.html(options);
+    }
+
+
+    this.setDows=function (new_dows)
+    {
+        timeFilters.dows=clone(new_dows);
+        onDowsChangeFn();
+        somethingChanged();
+    };
+    this.setDatesRange=function (new_dates)
+    {
+        if(!arraysEqual(timeFilters.dates_range,new_dates))
+        {
+            datesBrush.extent(reverse_dates_range(new_dates));
+        }
+        onDatesChangeFn();
+        somethingChanged();
+    };
+    this.setTodRange=function (new_hours)
+    {
+        if(!arraysEqual(timeFilters.hours_range,new_hours)) {
+            hoursBrush.extent(reverse_hours_range(new_hours));
+        }
+        onHoursChangeFn();
+        somethingChanged();
+    };
+    this.setSelectedYear=function(new_year){
+        $(parent_selector+" .year_selected").val(new_year);
+        yearSelectedChange();
+    };
+
+
+    this.getTodRange=function(){
+        return clone(timeFilters.hours_range);
+
+    };
+    this.getDatesRange=function(){
+        return clone(timeFilters.dates_range);
+
+    };
+    this.getDows=function(){
+        return timeFilters.dows;
+    };
+    this.getYear=function(){
+        return selected_year;
+    };
+
+
+    function reorderHours(d)
+    {
+        d.reverse();
+        var sliced1=d.slice(0,11);
+        var sliced=d.slice(11,d.length);
+        var conc=sliced.concat(sliced1);
+        return conc;
+    }
+
+
+    /**
+     * @param ex. [{h:20,c:25},{h:23,c:25},{h:18,c:25},{h:15,c:25},{h:10,c:25}]
+     * @return [{h:20,c:25},{h:23,c:25},{h:18,c:25},{h:15,c:25},{h:10,c:25} + horas faltantes con cuenta 0]
+     */
+    function refactorAxisesHours(d){
+        var returned= JSON.parse(emptyTweetsRadarHourly);
+        for(var i in d)
+        {
+            var r=d[i];
+            returned[r.h].v=r.v;
+        }
+        return returned;
+    }
 
     /**
      * Helper function to reformat data
      * @param dd
      * @returns {{group: string, axes: (Array|*)}}
      */
-    function hoursJson(dd,legend) {
+    function hoursJson(dp,legend) {
+        var dd=reorderHours(refactorAxisesHours(dp));
         if(!legend)
         {
             legend="Total per hour";
@@ -363,7 +464,7 @@ var TimeviewTool=function(parent_selector){
         return {
             group: legend,
             axes: dd.map(function (axis) {
-                return {axis: axis.h, value: parseInt(axis.c)};
+                return {axis: axis.h, value: parseFloat(axis.v)};
             })
         };
     }
@@ -514,22 +615,26 @@ var TimeviewTool=function(parent_selector){
     }
     function getMaximumValue(dates_range)
     {
-        maxGlobal=1
+        maxGlobal=1;
 
-        for(var m=0;m<12;m++)
+        if(yearRadarData.length>0)
         {
-            var monthData=yearRadarPlotted[m];
-            if(monthIncluded(dates_range,m))
+            for(var m=0;m<12;m++)
             {
-                var monthMax =d3.max(monthData, function(d) {
-                    return d3.max(d.axes, function(o) { return o.value; });
-                });
-                if(monthMax>maxGlobal)
+                var monthData=yearRadarPlotted[m];
+                if(monthIncluded(dates_range,m))
                 {
-                    maxGlobal=monthMax;
+                    var monthMax =d3.max(monthData, function(d) {
+                        return d3.max(d.axes, function(o) { return o.value; });
+                    });
+                    if(monthMax>maxGlobal)
+                    {
+                        maxGlobal=monthMax;
+                    }
                 }
             }
         }
+
         return maxGlobal;
     }
 
@@ -538,7 +643,7 @@ var TimeviewTool=function(parent_selector){
         try{
             var maxFiltered=getMaximumValue(dates_range);
 
-            var dataShowed=clone(yearRadarPlotted);
+            var dataShowed=yearRadarData.length>0?clone(yearRadarPlotted):empty_yearradar;
             for(var m=0;m<12;m++) {
                 dataShowed[m].forEach(function(curve)
                 {
@@ -853,19 +958,18 @@ var TimeviewTool=function(parent_selector){
         somethingChanged();
     }
 
-    function initializeTimeView()//TODO Receive other config parameters, or not?
+    function initializeTimeView()//TODO Receive other config parameters, or not?: width of round!
     {
         paintDatesBrush();
         paintHoursBrush();
         plotStaticLabels();
         pieBrushYear();
         pieBrushHours();
+        RadarChart.draw(parent_selector+" .radar_hours", plottedHours, radarConfigHours);
         timeFilters.dates_range=timeFiltersTemporal.dates_range;
         timeFilters.hours_range=timeFiltersTemporal.hours_range;
     }
 
-
-    //Ends bad paste
     initializeTimeView();
     return this;
 }

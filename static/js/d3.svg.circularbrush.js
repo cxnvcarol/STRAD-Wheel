@@ -1,3 +1,8 @@
+/**
+ * Modified version from https://github.com/emeeks/d3.svg.circularbrush
+ * @returns {_circularbrush}
+ */
+
 d3.svg.circularbrush = function() {
 	var _extent = [0,Math.PI * 2];
     var _circularbrushDispatch = d3.dispatch('brushstart', 'brushend', 'brush');
@@ -42,7 +47,6 @@ _brushG.selectAll("path.resize")
 	}
 
 	_circularbrush.extent = function(_value) {
-		//console.log("extent called");
 		var _d = _scale.domain();
 		var _r = _scale.range();
 
@@ -111,7 +115,6 @@ _brushG.selectAll("path.resize")
 	return _circularbrush;
 
 	function resizeDown(d) {
-        console.log("resize down");
 		var _mouse = d3.mouse(_brushG.node());
 
 		_originalBrushData = {startAngle: _brushData[0].startAngle, endAngle: _brushData[0].endAngle};
@@ -140,7 +143,6 @@ _brushG.selectAll("path.resize")
 
 
 	function resizeMove(_resize) {
-        console.log("resize move");
 		var _mouse = d3.mouse(_brushG.node());
 		var _current = Math.atan2(_mouse[1],_mouse[0]);
 		var _start = Math.atan2(_origin[1],_origin[0]);
@@ -210,14 +212,6 @@ _brushG.selectAll("path.resize")
 	}
 
 	function extentUp() {
-		console.log(_newBrushData);
-
-		/*
-		if(!_newBrushData || _newBrushData.length<2)
-		{
-			console.log("cate que ya te vi");
-		}
-		*/
 		if(_newBrushData && _newBrushData.length>1){
 			_brushData = _newBrushData;
 		}
