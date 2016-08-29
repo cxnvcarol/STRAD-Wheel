@@ -37,6 +37,7 @@ Includes:
 3. Add the STRAD Wheel tool by initializing a new StradWheel object with the corresponding CSS selector as parameter. The referenced HTML element must be a pre existing "div" element by the time of this call. e.g., 'timewheel=new StradWheel("#timeview");'
 4. Subscribe to changes in any of the modified filters, or to any change. See "Subscribing to changes" section.
 5. Add, replace and remove the shown data at any time by calling the functions *addDayPlotline*, *addYearPlotline*, *removeDayPlotline* and *removeYearPlotline*. 
+
 ## API
 ### Initializing
 - **TimeRadar(selector)**: Constructor receiving a String corresponding to the CSS3 selector of the element to populate with the STRAD Wheel.
