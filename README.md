@@ -31,12 +31,17 @@ Includes:
 
 
 ## Example of Use
-//complete with demo doc.
+
+1. Include the javascript dependencies: jquery.js, d3.js, d3.svg.circularbrush.js and radar.js (modified version in this repository), and the proposed stylesheet: strad-time.css
+2. Include our library: stradWheel.js.
+3. Add the STRAD Wheel tool by initializing a new StradWheel object with the corresponding CSS selector as parameter. The referenced HTML element must be a pre existing "div" element by the time of this call. e.g., 'timewheel=new StradWheel("#timeview");'
+4. Subscribe to changes in any of the modified filters, or to any change. See "Subscribing to changes" section.
+5. Add, replace and remove the shown data at any time by calling the functions *addDayPlotline*, *addYearPlotline*, *removeDayPlotline* and *removeYearPlotline*.
 ## API
 ### Initializing
 - **TimeRadar(selector)**: Constructor receiving a String corresponding to the CSS3 selector of the element to populate with the STRAD Wheel.
 - **setSelectableYears(years_array)**: Receives an array of integer with the selectable years (corresponding to the select element in the view). The selected year is used to match the dates
-_range to the corresponding year.
+_range to the corresponding year. By default this is set to an array containing only the current year.
 
 ### Setting displayed data
 - **addDayPlotline(legend,data)**: add or replace (if the legend already exists) the data in the inner radar with the corresponding legend. The parameter *'data'* is an array with objects for pair hour(h)-value(v):   
