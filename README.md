@@ -12,11 +12,11 @@ It is based on [D3.js] (https://d3js.org/), [jquery] (https://jquery.com/), and 
 [Visit here](https://cxnvcarol.github.io/STRAD-Wheel/)
 
 ## Definitions
-### Used time granularities
-- **year**: Selected year (type: integer)
-- **month**: Month of the year. Represented as an integer from 0 to 11 respectively from January to December.
-- **dow**: Day of the Week. Integer in the set *`[0,1,2,3,4,5,6]`* corresponding to the days from Sunday(0) to Saturday(6)
-- **tod**: Time of the day. Represented as an integer for each hour from `0` to `23`.
+### Time granularities
+- **year** (selected year):  (type: integer)
+- **month**(month of the year): Represented as an integer from 0 to 11 respectively from January to December.
+- **dow** (day of the week): Integer in the set *`[0,1,2,3,4,5,6]`* corresponding to the days from Sunday(0) to Saturday(6)
+- **tod** (time of the day): Represented as an integer for each hour from `0` to `23`.
 
 ### Filters
 - **selected_year**: integer with the selected year in the `<select>` html tag.
