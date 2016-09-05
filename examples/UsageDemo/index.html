@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>STRAD Wheel simple demo</title>
+
+
+</head>
+<body style="padding: 15px 0 0 40px;">
+
+<!--Dependencies:-->
+<script src="static/js/jquery-1.11.1.min.js"></script>
+<script src="static/js/d3.v3.min.js"></script>
+<script src="static/js/radar.js"></script>
+<script src="static/js/d3.svg.circularbrush.js"></script>
+
+<!-- Main lib:-->
+<script src="static/js/stradWheel.js"></script>
+<link rel="stylesheet" href="static/css/strad-wheel.css"/>
+
+
+
+<!-- EXAMPLE RELATED:-->
+
+<h1 class="text-center">STRAD Wheel  - Demo Example</h1>
+
+<div id="timeview" style="float:left"></div>
+
+
+<div id="test_tools" style="margin: 90px 0 0 40px;float: left;">
+    <div id="add_options">
+        <h2 class="text-center">Test options</h2>
+        <p>Add a plotline:</p>
+        <div><label for="add_yearplotline" style="margin:10px 5px 0 0;">Year plotline:</label><select id="add_yearplotline" style="margin:10px 5px 0 0;">
+            <option value="Year dummie 2">Year dummie 2</option>
+            <option value="Year dummie 3">Year dummie 3</option>
+        </select><button id="btn_add_yearplotline" class="btn btn-success btn-xs">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button></div>
+        <div><label for="add_dayplotline" style="margin:10px 5px 0 0;">Day plotline:</label><select style="margin:10px 5px 0 0;" id="add_dayplotline">
+            <option value="Day dummie 2">Day dummie 2</option>
+            <option value="Day dummie 3">Day dummie 3</option>
+        </select><button id="btn_add_dayplotline" class="btn btn-success btn-xs">
+            <span class="glyphicon glyphicon-plus"></span></button></div>
+
+    </div>
+    <div id="rm_options" style="margin-top:50px">
+        <p>Remove a plotline:</p>
+        <div><label for="rm_yearplotline" style="margin:10px 5px 0 0;">Year plotline</label><select style="margin:10px 5px 0 0;" id="rm_yearplotline">
+            <option value="Year dummie 1">Year dummie 1</option>
+        </select><button id="btn_rm_yearplotline" class="btn btn-danger btn-xs">
+            <span class="glyphicon glyphicon-minus"></span></button></div>
+        <div><label for="rm_dayplotline" style="margin:10px 5px 0 0;">Day plotline:</label><select style="margin:10px 5px 0 0;" id="rm_dayplotline">
+            <option value="Day dummie 1">Day dummie 1</option>
+        </select><button id="btn_rm_dayplotline" class="btn btn-danger btn-xs">
+            <span class="glyphicon glyphicon-minus"></span></button></div>
+
+    </div>
+    <p class="text-justify" style="max-width: 350px; margin-top: 50px; font-weight: 100;font-size: medium;font-style: italic;">
+        Simple example demonstrating the usage of the STRAD-Wheel library. In this example the notifications responds to the actions in the tool. You can also add or remove some pre-built data above.</p>
+</div>
+
+
+
+<link rel="stylesheet" href="static/css/bootstrap.css"/>
+<script src="static/js/notify.min.js"></script>
+<script src="static/js/index.js"></script>
+
+
+</body>
+</html>
