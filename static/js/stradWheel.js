@@ -352,7 +352,7 @@ var StradWheel=function(parent_selector){
         onChangeFn=delegate_function;
 
     };
-    this.onHoursChange=function(delegate_function){
+    this.onTodChange=function(delegate_function){
         onHoursChangeFn=delegate_function;
 
     };
@@ -370,12 +370,12 @@ var StradWheel=function(parent_selector){
 
     this.setSelectableYears=function(int_array)
     {
-        var stag=$(parent_selector+" select#selected_year");
+        var stag=$(parent_selector+" select.year_selected");
         stag.html();
         var options="";
         for(var i in int_array)
         {
-            options+="<option>"+i+"</option>";
+            options+="<option>"+int_array[i]+"</option>";
         }
         stag.html(options);
     }
@@ -384,27 +384,28 @@ var StradWheel=function(parent_selector){
     this.setDows=function (new_dows)
     {
         timeFilters.dows=clone(new_dows);
-        onDowsChangeFn();
-        somethingChanged();
+        onDowsChangeFn(new_dows);
+        somethingChanged("dows");
     };
     this.setDatesRange=function (new_dates)
     {
         if(!arraysEqual(timeFilters.dates_range,new_dates))
         {
             datesBrush.extent(reverse_dates_range(new_dates));
+
+            onDatesChangeFn(new_dates);
+            somethingChanged("dates_range");
         }
-        onDatesChangeFn();
-        somethingChanged();
     };
     this.setTodRange=function (new_hours)
     {
         if(!arraysEqual(timeFilters.hours_range,new_hours)) {
             hoursBrush.extent(reverse_hours_range(new_hours));
         }
-        onHoursChangeFn();
-        somethingChanged();
+        onHoursChangeFn(timeFilters.hours_range);
+        somethingChanged("tod_range");
     };
-    this.setSelectedYear=function(new_year){
+    this.setYear=function(new_year){
         $(parent_selector+" .year_selected").val(new_year);
         yearSelectedChange();
     };
@@ -753,7 +754,7 @@ var StradWheel=function(parent_selector){
     function updateTimeInfo()
     {
         d3.select(parent_selector+" .filters_info").html("<i>Dates:</i> [" + timeFiltersTemporal.dates_range[0].toLocaleDateString() + "," + timeFiltersTemporal.dates_range[1].toLocaleDateString() + "]<br/>"+
-            "<i>Hours:</i> [" + hours(timeFiltersTemporal.hours_range[0]) + "," + hours(timeFiltersTemporal.hours_range[1]) + "]");
+        "<i>Hours:</i> [" + hours(timeFiltersTemporal.hours_range[0]) + "," + hours(timeFiltersTemporal.hours_range[1]) + "]");
     }
 
     function pieBrushYear() {
@@ -815,7 +816,7 @@ var StradWheel=function(parent_selector){
         var val0=new Date("01/01/"+selected_year);
         val0.setDate(0);
         var val1=new Date(val0);
-        val1.setSelectedYear(val0.getFullYear()+1);
+        val1.setYear(val0.getFullYear()+1);
         var yearTime=val1.getTime()-val0.getTime();
         return new_dates.map(function(val,i){
             return 1000*(val.getTime()-val0)/yearTime;
@@ -836,8 +837,8 @@ var StradWheel=function(parent_selector){
         return _h;
     }
 
-    function somethingChanged() {
-        onChangeFn();
+    function somethingChanged(prop) {
+        onChangeFn(prop);
         updateDowColors();
         updateDynamicZoom(timeFilters.dates_range);
     }
@@ -854,8 +855,8 @@ var StradWheel=function(parent_selector){
                 //state_datamodel.dates_range(clone(timeFilters.dates_range));
 
                 //updateViews();
-                onDatesChangeFn();
-                somethingChanged();
+                onDatesChangeFn(timeFilters.dates_range);
+                somethingChanged("dates_range");
             })
             .on("brush", pieBrushYear);
 
@@ -879,8 +880,8 @@ var StradWheel=function(parent_selector){
                 timeFilters.hours_range=timeFiltersTemporal.hours_range;
                 //state_datamodel.hours_range(clone(timeFilters.hours_range));
                 //updateViews();
-                onHoursChangeFn();
-                somethingChanged();
+                onHoursChangeFn(timeFilters.hours_range);
+                somethingChanged("tod_range");
             })
             .on("brush", pieBrushHours);
 
@@ -894,7 +895,6 @@ var StradWheel=function(parent_selector){
     }
 
     function onAxisClicked() {
-        console.log("clicking axis");
         var dow=$(this).html();
         var dowIndex=weekdays.indexOf(dow);
 
@@ -916,8 +916,8 @@ var StradWheel=function(parent_selector){
         }
         //state_datamodel.dows(clone(timeFilters.dows));
         //updateViews();
-        onDowsChangeFn();
-        somethingChanged();
+        onDowsChangeFn(timeFilters.dows);
+        somethingChanged("dows");
     }
 
     function removeDeferredInQueue(defid)
@@ -947,15 +947,14 @@ var StradWheel=function(parent_selector){
 
     function yearSelectedChange()
     {
-        console.log("year changing");
         selected_year=parseInt($(parent_selector+' .year_selected').val());
-        timeFilters.dates_range[0].setSelectedYear(selected_year);
-        timeFilters.dates_range[1].setSelectedYear(selected_year);
+        timeFilters.dates_range[0].setYear(selected_year);
+        timeFilters.dates_range[1].setYear(selected_year);
         pieBrushYear();
         //
         // updateViews();
-        onYearChangeFn();
-        somethingChanged();
+        onYearChangeFn(selected_year);
+        somethingChanged("year");
     }
 
     function initializeTimeView()//TODO Receive other config parameters, or not?: width of round!
@@ -992,11 +991,10 @@ var htmlTimeTool='<div style="position:relative" class="radar_year">' +
     '<div style="position:absolute; top:0; left:0; z-index:10;top: 210px;left: 215px;">' +
     '<svg onselectstart="return false" class="radar_hours radar"></svg>' +
     '<svg style="overflow:visible; width: 2px;height: 6px;margin-top: 20px;" class="hour_brush brush"></svg></div></div>' +
-    '<p style="position: absolute; top: 20px;" class="filters_info"></p>' +
-    '<div style="position: absolute; top: 70px;"><p style="float: left;">Year</p>' +
-    '<!--TODO list of years should be an initialization parameter (default only the current year)-->' +
+    '<p style="position: absolute; top: 10px;" class="filters_info"></p>' +
+    '<div style="position: absolute; top: 60px;"><p style="float: left;">Year</p>' +
     '<select style="float: left;margin-left:10px;margin-top:13px;" data-bind="value: state_datamodel.selected_year" class="year_selected">' +
-    '<option disabled="disabled">2013</option><option selected="selected">2014</option><option>2015</option></select></div>';
+    '<option selected="selected">'+(new Date().getFullYear())+'</option></select></div>';
 
 
 function findInArrayById(arrayDefs,defid)

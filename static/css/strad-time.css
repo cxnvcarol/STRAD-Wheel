@@ -57,6 +57,10 @@
     padding: 0px;
 }
 
+.timeview *{
+    overflow: visible!important;
+}
+
 /****** brush tool ***********/
 
 .resize {

@@ -10,17 +10,56 @@
 
 
 <script src="static/js/jquery-1.11.1.min.js"></script>
+
 <script src="static/js/d3.v3.min.js"></script>
 <script src="static/js/radar.js"></script>
 <script src="static/js/d3.svg.circularbrush.js"></script>
 <script src="static/js/stradWheel.js"></script>
+
+
+
+
+<!-- EXAMPLE RELATED:-->
+
+<div id="timeview" style="float:left"></div>
+
+
+<div id="test_tools">
+    <div id="add_options">
+        <p>Add a plotline:</p>
+        <div><label for="add_yearplotline">Year plotline</label><select id="add_yearplotline">
+            <option value="Year dummie 2">Year dummie 2</option>
+            <option value="Year dummie 3">Year dummie 3</option>
+        </select><button id="btn_add_yearplotline" class="btn btn-success btn-xs">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button></div>
+        <div><label for="add_dayplotline">TOD plotline:</label><select id="add_dayplotline">
+            <option value="Day dummie 2">Day dummie 2</option>
+            <option value="Day dummie 3">Day dummie 3</option>
+        </select><button id="btn_add_dayplotline" class="btn btn-success btn-xs">
+            <span class="glyphicon glyphicon-plus"></span></button></div>
+
+    </div>
+    <div id="rm_options">
+        <p>Remove a plotline:</p>
+        <div><label for="rm_yearplotline">Year plotline</label><select id="rm_yearplotline">
+            <option value="Year dummie 1">Year dummie 1</option>
+        </select><button id="btn_rm_yearplotline" class="btn btn-danger btn-xs">
+            <span class="glyphicon glyphicon-minus"></span></button></div>
+        <div><label for="rm_dayplotline">TOD plotline:</label><select id="rm_dayplotline">
+            <option value="Day dummie 1">Day dummie 1</option>
+        </select><button id="btn_rm_dayplotline" class="btn btn-danger btn-xs">
+            <span class="glyphicon glyphicon-minus"></span></button></div>
+
+    </div>
+</div>
+
+
 <link rel="stylesheet" href="static/css/strad-time.css"/>
-
-
-
-<div id="timeview" class="timeview"></div>
-
+<link rel="stylesheet" href="static/css/bootstrap.css"/>
+<script src="static/js/notify.min.js"></script>
 <script src="static/js/index.js"></script>
+
 
 </body>
 </html>
