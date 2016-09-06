@@ -1,0 +1,152 @@
+.radar svg{
+    overflow: visible;
+    width: 2px;
+}
+
+
+.radar{
+    width: 2px;
+    height: 2px;
+    overflow: visible!important;
+}
+.radar-chart .area {
+    fill-opacity: 0.7;
+    stroke-opacity: 0.7;
+}
+.radar-chart.focus .area {
+    fill-opacity: 0.3;
+    stroke-opacity: 0.3;
+}
+.radar-chart.focus .area.focused {
+    fill-opacity: 0.9;
+    stroke-opacity: 0.9;
+}
+.area {
+    fill: none;
+    stroke: blue;
+}
+.circle-group .circle
+{
+    stroke: blue;
+    fill: blue;
+}
+
+.radar{
+    position: absolute;
+}
+.radar text::selection {
+    background-color: transparent;
+}
+
+.radar_year::selection {
+    background-color: transparent;
+}
+
+.radar polygon{
+    fill: none!important;
+}
+
+.line {
+    fill: none;/*avoid filling the lines in the radar*/
+}
+
+.timeview{
+    height: 900px;/* TODO Set size dynamically*/
+    width: 830px;
+    position: relative;
+    padding: 0px;
+}
+
+.timeview *{
+    overflow: visible!important;
+}
+
+/****** brush tool ***********/
+
+.resize {
+    fill-opacity: 0.5;
+    cursor: move;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.extent {
+    fill-opacity: 0.8;
+    fill: black;
+    cursor: pointer;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.e {
+    fill: rgb(50,50,50);
+    cursor: move;
+}
+
+.w {
+    fill: rgb(0,0,0);
+    cursor: move;
+}
+
+g.radarBrush .extent {
+    fill: #aa0000;
+    fill-opacity: 0.6;
+    stroke: none;
+}
+
+p{
+    font-weight: 700;
+    font-family: helvetica, sans;
+    pointer-events: none;
+}
+
+/****** end brush tool ***********/
+
+
+/*** map styles ***/
+
+/* this should be for the polygons of upz:
+
+path {
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    fill-rule: evenodd;
+    stroke: rgb(0, 136, 0);
+    stroke-opacity: 0.5;
+    stroke-width: 3px;
+    fill: rgb(0, 136, 51);
+    fill-opacity: 0.2;
+}
+*/
+/**** labels inner ***/
+
+.radar_year {
+    min-height: 600px;
+    /*font-size: 10px;*/
+}
+.radar_year .radar{
+    margin: 20px 0 0 0;
+}
+text.level-labels{
+    font-size: 11px;
+}
+.radar_year{
+    padding-top: 50px;
+    margin-left: 90px;
+}
+.radar_year div{
+    padding: inherit;
+}
+
+/********  styles for buttons in radar ***********/
+
+.axis-clickable{
+    cursor: pointer;
+}
+.axis-clickable.selected{
+    font-weight: 900;
+    fill: red;
+}
+.axis-clickable.unselected{
+    fill: gray;
+}
