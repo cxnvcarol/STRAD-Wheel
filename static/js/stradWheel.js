@@ -696,7 +696,7 @@ var StradWheel=function(parent_selector){
         for(var i = 0; i < 12; i++){
             //paint lines of days
             var radarConfigOuterDatesM = (JSON.parse(JSON.stringify(radarConfigOuterDates)));//clone object
-            var objDum={group:'dummie'};
+            var objDum={group:'dumm'};
             objDum.axes=[];
             var nD=new Date(selected_year,i,0).getDate();
             for(var j= nD; j>0;j--)
@@ -708,7 +708,7 @@ var StradWheel=function(parent_selector){
             RadarChart.draw(parent_selector+" svg.monthDates_"+(i), dataDummieOuterDates, radarConfigOuterDatesM);//styler
         }
         //paint month labels..
-        var objDumMonth={group:'dummie'};
+        var objDumMonth={group:'dumm'};
         objDumMonth.axes=[];
         for(var j= 0; j<12;j++)
         {
@@ -957,7 +957,7 @@ var StradWheel=function(parent_selector){
         somethingChanged("year");
     }
 
-    function initializeTimeView()//TODO Receive other config parameters, or not?: width of round!
+    function initializeTimeView()//TODO Receive other config parameters, or not?: radius?!
     {
         paintDatesBrush();
         paintHoursBrush();

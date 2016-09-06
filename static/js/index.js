@@ -3,7 +3,7 @@
  */
 var timewheel;
 
-//dummie data:
+//sample data:
 
 var dummie_yeardata1=[{"m":0,"d":0,"v":2.5},{"m":0,"d":1,"v":1.2},{"m":0,"d":2,"v":10},{"m":0,"d":3,"v":7.4},{"m":0,"d":4,"v":10},{"m":0,"d":5,"v":10},{"m":0,"d":6,"v":10},{"m":1,"d":0,"v":10},{"m":1,"d":1,"v":10},{"m":1,"d":2,"v":10},{"m":1,"d":3,"v":15},{"m":1,"d":4,"v":10},{"m":1,"d":5,"v":10},{"m":1,"d":6,"v":10},{"m":2,"d":0,"v":10},{"m":2,"d":1,"v":10},{"m":2,"d":2,"v":10},{"m":2,"d":3,"v":15},
     {"m":2,"d":4,"v":10},{"m":2,"d":5,"v":10},{"m":2,"d":6,"v":10},{"m":3,"d":0,"v":10},{"m":3,"d":1,"v":10},{"m":3,"d":2,"v":10},{"m":3,"d":3,"v":15},{"m":3,"d":4,"v":10},{"m":3,"d":5,"v":10},{"m":3,"d":6,"v":10},{"m":4,"d":0,"v":10},{"m":4,"d":1,"v":10},{"m":4,"d":2,"v":10},{"m":4,"d":3,"v":15},{"m":4,"d":4,"v":10},{"m":4,"d":5,"v":10},{"m":4,"d":6,"v":10},{"m":5,"d":0,"v":10},{"m":5,"d":1,"v":10},
@@ -80,22 +80,22 @@ function initialize()
 initialize();
 
 
-timewheel.addYearPlotline("Year dummie 1", dummie_yeardata1);
-timewheel.addDayPlotline("Day dummie 1",dummie_toddata1);
+timewheel.addYearPlotline("Year sample 1", dummie_yeardata1);
+timewheel.addDayPlotline("Day sample 1",dummie_toddata1);
 
 //choose plotlines to add/remove:
 $("#btn_add_yearplotline").click(function(){
     var line=$("#add_yearplotline").val();
     switch (line)
     {
-        case "Year dummie 1":
-            timewheel.addYearPlotline("Year dummie 1", dummie_yeardata1);
+        case "Year sample 1":
+            timewheel.addYearPlotline("Year sample 1", dummie_yeardata1);
             break;
-        case "Year dummie 2":
-            timewheel.addYearPlotline("Year dummie 2", dummie_yeardata2);
+        case "Year sample 2":
+            timewheel.addYearPlotline("Year sample 2", dummie_yeardata2);
             break;
-        case "Year dummie 3":
-            timewheel.addYearPlotline("Year dummie 3", dummie_yeardata3);
+        case "Year sample 3":
+            timewheel.addYearPlotline("Year sample 3", dummie_yeardata3);
             break;
     }
     $("#add_yearplotline option[value='"+line+"']").remove();
@@ -106,14 +106,14 @@ $("#btn_add_dayplotline").click(function(){
     var line=$("#add_dayplotline").val();
     switch (line)
     {
-        case "Day dummie 1":
-            timewheel.addDayPlotline("Day dummie 1", dummie_toddata1);
+        case "Day sample 1":
+            timewheel.addDayPlotline("Day sample 1", dummie_toddata1);
             break;
-        case "Day dummie 2":
-            timewheel.addDayPlotline("Day dummie 2", dummie_toddata2);
+        case "Day sample 2":
+            timewheel.addDayPlotline("Day sample 2", dummie_toddata2);
             break;
-        case "Day dummie 3":
-            timewheel.addDayPlotline("Day dummie 3", dummie_toddata3);
+        case "Day sample 3":
+            timewheel.addDayPlotline("Day sample 3", dummie_toddata3);
             break;
     }
     $("#add_dayplotline option[value='"+line+"']").remove();
