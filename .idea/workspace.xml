@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e8ba7f2-0aee-42f1-ab40-c9d9009f622d" name="Default" comment="simple example complete">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/stradWheel.js" afterPath="$PROJECT_DIR$/static/js/strad-wheel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/index.js" afterPath="$PROJECT_DIR$/static/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/stradWheel.js" afterPath="$PROJECT_DIR$/static/js/stradWheel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="STRAD-Wheel.iws" />
@@ -34,8 +33,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32744783" vertical-offset="411" max-vertical-offset="1140">
-              <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.26448363" vertical-offset="0" max-vertical-offset="1215">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -55,24 +54,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stradWheel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/stradWheel.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="10363" max-vertical-offset="15690">
-              <caret line="694" column="5" selection-start-line="694" selection-start-column="5" selection-end-line="694" selection-end-column="5" />
-              <folding>
-                <marker date="1473142268144" expanded="true" signature="34613:34630" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="34672:34715" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="35189:35241" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="35776:35786" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="35841:35881" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="35934:36002" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="36100:36158" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="36222:36252" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="36300:36330" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="36342:36354" placeholder="..." />
-                <marker date="1473142268144" expanded="true" signature="36388:36433" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-0.80701756" vertical-offset="689" max-vertical-offset="2115">
+              <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,9 +73,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/static/css/strad-time.css" />
-        <option value="$PROJECT_DIR$/static/js/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/static/js/stradWheel.js" />
+        <option value="$PROJECT_DIR$/static/js/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -552,7 +539,7 @@
       <workItem from="1473067708136" duration="1076000" />
       <workItem from="1473071045120" duration="7303000" />
       <workItem from="1473084209713" duration="1266000" />
-      <workItem from="1473140032381" duration="1348000" />
+      <workItem from="1473140032381" duration="2048000" />
     </task>
     <task id="LOCAL-00001" summary="playing with plotlines">
       <created>1473075374298</created>
@@ -570,17 +557,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12180000" />
+    <option name="totallyTimeSpent" value="12880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1280" height="804" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32896653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47452694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -595,7 +582,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23424879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23424879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -711,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1440">
-          <caret line="101" column="47" selection-start-line="101" selection-start-column="47" selection-end-line="101" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06185567" vertical-offset="0" max-vertical-offset="485">
@@ -726,30 +706,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/stradWheel.js">
+    <entry file="file://$PROJECT_DIR$/static/js/strad-wheel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10363" max-vertical-offset="15690">
+        <state vertical-scroll-proportion="0.07264297" vertical-offset="10363" max-vertical-offset="15690">
           <caret line="694" column="5" selection-start-line="694" selection-start-column="5" selection-end-line="694" selection-end-column="5" />
           <folding>
-            <marker date="1473142268144" expanded="true" signature="34613:34630" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="34672:34715" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="35189:35241" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="35776:35786" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="35841:35881" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="35934:36002" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="36100:36158" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="36222:36252" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="36300:36330" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="36342:36354" placeholder="..." />
-            <marker date="1473142268144" expanded="true" signature="36388:36433" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1473142268144" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.80701756" vertical-offset="689" max-vertical-offset="2115">
+          <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32744783" vertical-offset="411" max-vertical-offset="1140">
-          <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.26448363" vertical-offset="0" max-vertical-offset="1215">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

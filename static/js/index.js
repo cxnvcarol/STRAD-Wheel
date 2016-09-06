@@ -43,34 +43,34 @@ function initialize()
     //Register to changes:
 
     timewheel.onDatesChange(function(new_datesrange){
-        $.notify("The selected dates range is now: "
+        $("#notifications").notify("The selected dates range is now: "
             +new_datesrange
             //Could also be:
             //+timewheel.getDatesRange()
-            ,{position:"top right",autoHideDelay:5000, className: 'info'})
+            ,{position:"bottom left",autoHideDelay:3000, className: 'info'})
     });
 
     timewheel.onTodChange(function(new_todrange){
-        $.notify("The selected time range is now: ["
+        $("#notifications").notify("The selected time range is now: ["
         +timewheel.getTodRange()
             //Could also be:
             //+new_todrange
-        +"]",{position:"top right",autoHideDelay:5000, className: 'success'})
+        +"]",{position:"bottom left",autoHideDelay:3000, className: 'info'})
     });
 
 
     timewheel.onDowsChange(function(new_dows){
-        $.notify("The selected dows are now: ["
+        $("#notifications").notify("The selected dows are now: ["
         +timewheel.getDows()
             //Could also be:
             //+new_dows
-        +"]",{position:"top right",autoHideDelay:5000, className: 'warn'})
+        +"]",{position:"bottom left",autoHideDelay:3000, className: 'info'})
     });
 
     timewheel.onChange(function(prop){
-        $.notify("This has changed: "
+        $("#notifications2").notify("This has changed: "
             +prop
-            ,{position:"bottom right",autoHideDelay:3000, className: 'success'})
+            ,{position:"bottom left",autoHideDelay:3000, className: 'success'})
     });
 
 
