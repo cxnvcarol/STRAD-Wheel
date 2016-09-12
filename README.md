@@ -7,7 +7,9 @@ It is based on [D3.js] (https://d3js.org/), [jquery] (https://jquery.com/), and 
 <img src="https://cxnvcarol.github.io/STRAD-Wheel/static/images/stradwheel.png" width="480">
 
 ## Demo
-[Visit here](https://cxnvcarol.github.io/STRAD-Wheel/)
+[Visit the simple demo](https://cxnvcarol.github.io/STRAD-Wheel/)
+[Explanatory video here] (https://youtu.be/bvQtC3_A8ws)
+[STRAD for Road Safety in France](http://strad.cs.uni-kl.de:3000)
 
 ## Definitions
 ### Time granularities
