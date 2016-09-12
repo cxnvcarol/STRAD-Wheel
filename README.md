@@ -12,6 +12,7 @@ It is based on [D3.js] (https://d3js.org/), [jquery] (https://jquery.com/), and 
 [STRAD for Road Safety in France](http://strad.cs.uni-kl.de:3000)
 
 Explanatory video here:
+
 [![Explanatory video here](http://img.youtube.com/vi/bvQtC3_A8ws/0.jpg)](https://youtu.be/bvQtC3_A8ws)
 
 
