@@ -13,7 +13,7 @@ It is based on [D3.js] (https://d3js.org/), [jquery] (https://jquery.com/), and 
 
 Explanatory video here:
 
-[![Explanatory video here](http://img.youtube.com/vi/bvQtC3_A8ws/0.jpg)](https://youtu.be/bvQtC3_A8ws)
+[![Explanatory video here](http://img.youtube.com/vi/e-879Mm4WKo/0.jpg)](https://youtu.be/e-879Mm4WKo)
 
 
 
