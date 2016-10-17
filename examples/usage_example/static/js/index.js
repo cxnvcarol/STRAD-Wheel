@@ -31,7 +31,6 @@ var dummie_toddata3=[{"h":0,"v":0.75},{"h":1,"v":1.7999999999999998},{"h":2,"v":
 
 
 
-
 function initialize()
 {
     //populate div with the tool

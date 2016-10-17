@@ -5,11 +5,13 @@
 
 var StradWheel=function(parent_selector){
 
+
+
     //empty dayradar
     var empty_dayradar=[{"group":"","axes":[{"axis":"12m","value":0},{"axis":"11am","value":0},{"axis":"10am","value":0},{"axis":"9am","value":0},{"axis":"8am","value":0},{"axis":"7am","value":0},{"axis":"6am","value":0},{"axis":"5am","value":0},{"axis":"4am","value":0},{"axis":"3am","value":0},{"axis":"2am","value":0},{"axis":"1am","value":0},{"axis":"12am","value":0},{"axis":"11pm","value":0},{"axis":"10pm","value":0},{"axis":"9pm","value":0},{"axis":"8pm","value":0},{"axis":"7pm","value":0},{"axis":"6pm","value":0},{"axis":"5pm","value":0},{"axis":"4pm","value":0},{"axis":"3pm","value":0},{"axis":"2pm","value":0},{"axis":"1pm","value":0}]}];
     var empty_yearradar=[[{"group":"","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}],[{"group":"Total per day of week","axes":[{"axis":"Sun","value":0},{"axis":"Sat","value":0},{"axis":"Fri","value":0},{"axis":"Thu","value":0},{"axis":"Wed","value":0},{"axis":"Tue","value":0},{"axis":"Mon","value":0}]}]];
 
-    var emptyTweetsRadarHourly=JSON.stringify([
+    var empty_day_template=JSON.stringify([
         {h:"12am",c:0},
         {h:"1am",c:0},
         {h:"2am",c:0},
@@ -38,7 +40,7 @@ var StradWheel=function(parent_selector){
 
     this.example_yearparam=[{"m":0,"d":0,"v":2.5},{"m":0,"d":1,"v":1.2},{"m":0,"d":2,"v":10},{"m":0,"d":3,"v":7.4},{"m":0,"d":4,"v":10},{"m":0,"d":5,"v":10},{"m":0,"d":6,"v":10},{"m":1,"d":0,"v":10},{"m":1,"d":1,"v":10},{"m":1,"d":2,"v":10},{"m":1,"d":3,"v":15},{"m":1,"d":4,"v":10},{"m":1,"d":5,"v":10},{"m":1,"d":6,"v":10},{"m":2,"d":0,"v":10},{"m":2,"d":1,"v":10},{"m":2,"d":2,"v":10},{"m":2,"d":3,"v":15},{"m":2,"d":4,"v":10},{"m":2,"d":5,"v":10},{"m":2,"d":6,"v":10},{"m":3,"d":0,"v":10},{"m":3,"d":1,"v":10},{"m":3,"d":2,"v":10},{"m":3,"d":3,"v":15},{"m":3,"d":4,"v":10},{"m":3,"d":5,"v":10},{"m":3,"d":6,"v":10},{"m":4,"d":0,"v":10},{"m":4,"d":1,"v":10},{"m":4,"d":2,"v":10},{"m":4,"d":3,"v":15},{"m":4,"d":4,"v":10},{"m":4,"d":5,"v":10},{"m":4,"d":6,"v":10},{"m":5,"d":0,"v":10},{"m":5,"d":1,"v":10},{"m":5,"d":2,"v":10},{"m":5,"d":3,"v":15},{"m":5,"d":4,"v":10},{"m":5,"d":5,"v":10},{"m":5,"d":6,"v":10},{"m":6,"d":0,"v":10},{"m":6,"d":1,"v":10},{"m":6,"d":2,"v":10},{"m":6,"d":3,"v":15},{"m":6,"d":4,"v":10},{"m":6,"d":5,"v":10},{"m":6,"d":6,"v":10},{"m":7,"d":0,"v":10},{"m":7,"d":1,"v":10},{"m":7,"d":2,"v":10},{"m":7,"d":3,"v":15},{"m":7,"d":4,"v":10},{"m":7,"d":5,"v":10},{"m":7,"d":6,"v":10},{"m":8,"d":0,"v":10},{"m":8,"d":1,"v":10},{"m":8,"d":2,"v":10},{"m":8,"d":3,"v":15},{"m":8,"d":4,"v":10},{"m":8,"d":5,"v":10},{"m":8,"d":6,"v":10},{"m":9,"d":0,"v":10},{"m":9,"d":1,"v":10},{"m":9,"d":2,"v":10},{"m":9,"d":3,"v":15},{"m":9,"d":4,"v":10},{"m":9,"d":5,"v":10},{"m":9,"d":6,"v":10},{"m":10,"d":0,"v":10},{"m":10,"d":1,"v":10},{"m":10,"d":2,"v":10},{"m":10,"d":3,"v":15},{"m":10,"d":4,"v":10},{"m":10,"d":5,"v":10},{"m":10,"d":6,"v":10},{"m":11,"d":0,"v":10},{"m":11,"d":1,"v":10},{"m":11,"d":2,"v":10},{"m":11,"d":3,"v":15},{"m":11,"d":4,"v":10},{"m":11,"d":5,"v":10},{"m":11,"d":6,"v":10}];
     this.example_dayparam=[{"h":0,"v":1.5},{"h":1,"v":1},{"h":2,"v":1.2},{"h":3,"v":2.7},{"h":4,"v":2.5},{"h":5,"v":2.5},{"h":6,"v":2.5},{"h":7,"v":2.5},{"h":8,"v":2.5},{"h":9,"v":2.5},{"h":10,"v":2.5},{"h":11,"v":2.5},{"h":12,"v":2.5},{"h":13,"v":2.5},{"h":14,"v":2.5},{"h":15,"v":2.5},{"h":16,"v":2.5},{"h":17,"v":2.5},{"h":18,"v":2.5},{"h":19,"v":2.5},{"h":20,"v":2.5},{"h":21,"v":2.5},{"h":22,"v":2.5},{"h":23,"v":2.5}];
-    //private varables
+    //private variables
     var parent_div=$(parent_selector);
     parent_div.addClass("timeview");
     parent_div.html(htmlTimeTool);
@@ -67,18 +69,13 @@ var StradWheel=function(parent_selector){
 
 
 
-    /**
-     * Created by CarolXimena on 01/10/2015.
-     */
-
-
     var deferredQueue=[];//app related
     var margin_month=0.1;//% space btwn partial radars of months
     var maxGlobal=1;
 
-//FIXME Better with configurable sizes
+
     var radarConfigDate = {
-        w: 550,
+        w: 550,//FIXME Better with configurable sizes
         h: 550,
         facet: false,
         levels: 5,
@@ -442,7 +439,7 @@ var StradWheel=function(parent_selector){
      * @return [{h:20,c:25},{h:23,c:25},{h:18,c:25},{h:15,c:25},{h:10,c:25} + horas faltantes con cuenta 0]
      */
     function refactorAxisesHours(d){
-        var returned= JSON.parse(emptyTweetsRadarHourly);
+        var returned= JSON.parse(empty_day_template);
         for(var i in d)
         {
             var r=d[i];
