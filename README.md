@@ -4,8 +4,7 @@ It is based on [D3.js] (https://d3js.org/), [jquery] (https://jquery.com/), and 
 - **D3.circularbrush.js**: Used [circular brush] (https://github.com/emeeks/d3.svg.circularbrush) to set the filters of range.
 - **radar.js**: Modified [radar-chart] (https://gist.github.com/chrisrzhou/2421ac6541b68c1680f8), based in turn on this [radar-chart-d3] (https://github.com/alangrafu/radar-chart-d3) library
 
-<img src="https://cxnvcarol.github.io/STRAD-Wheel/examples/usage_example/static/images/strad-wheel-des.jpg" width="480">
-
+<img src="https://github.com/cxnvcarol/STRAD-Wheel/blob/master/examples/usage_example/static/images/strad-wheel-des.jpg">
 
 ## Demo
 [Visit the simple demo](https://cxnvcarol.github.io/STRAD-Wheel/)
