@@ -9,7 +9,6 @@ It is based on [D3.js] (https://d3js.org/), [jquery] (https://jquery.com/), and 
 ## Demo
 [Visit the simple demo](https://cxnvcarol.github.io/STRAD-Wheel/)
 
-[STRAD for Road Safety in France](http://strad.cs.uni-kl.de:3000)
 
 Explanatory video here:
 
